@@ -1,7 +1,7 @@
 React Router Example: Server Rendering Lazy Routes
 ==================================================
 
-React Router has two features great features that seem like they might
+React Router has two great features that seem like they might
 not work well together: server side rendering and code splitting.
 
 This minimal demo shows how to get the benefits of server rendering and
