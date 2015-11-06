@@ -18,7 +18,6 @@ http.createServer((req, res) => {
 
   if (req.url === '/favicon.ico') {
     write('haha', 'text/plain', res)
-    return
   }
 
   // serve JavaScript assets
@@ -26,7 +25,6 @@ http.createServer((req, res) => {
     fs.readFile(`.${req.url}`, (err, data) => {
       write(data, 'text/javascript', res)
     })
-    return
   }
 
   // handle all other urls with React Router
