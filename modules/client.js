@@ -9,12 +9,9 @@ const location = `${pathname}${search}${hash}`
 
 // calling `match` is simply for side effects of
 // loading route/component code for this location
-match({ routes, location }, (error, redirectInfo, renderProps) => {
+match({ routes, location }, () => {
   render(
-    <Router
-      routes={routes}
-      history={createHistory()}
-    />,
+    <Router routes={routes} history={createHistory()} />,
     document.getElementById('app')
   )
 })
