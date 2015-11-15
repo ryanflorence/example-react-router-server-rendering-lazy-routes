@@ -4,13 +4,14 @@
   "description": "",
   "main": "client.js",
   "dependencies": {
-    "babel-loader": "^5.3.3",
-    "babel-core": "^5.8.33",
-    "history": "^1.13.0",
+    "babel": "^5.8.34",
+    "babel-core": "^5.8.34",
+    "babel-loader": "^5.4.0",
+    "history": "^1.13.1",
     "react": "^0.14.2",
-    "react-dom": "^0.14.0",
-    "react-router": "^1.0.0-rc4",
-    "webpack": "^1.12.3"
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0",
+    "webpack": "^1.12.6"
   },
   "scripts": {
     "start": "NODE_ENV=production webpack --progress && babel-node modules/server.js"
