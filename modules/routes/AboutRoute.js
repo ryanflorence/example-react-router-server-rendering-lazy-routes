@@ -2,6 +2,8 @@ import About from '../components/About'
 
 export default {
   path: 'about',
-  component: About
+  component: About,
+  onEnter: function enter(nextState, replaceState, callback) {
+      setTimeout(callback, 1000);
+  },
 }
-
