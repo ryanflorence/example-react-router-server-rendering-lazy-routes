@@ -4,18 +4,22 @@
   "description": "",
   "main": "client.js",
   "dependencies": {
-    "babel": "^5.8.34",
-    "babel-core": "^5.8.34",
-    "babel-loader": "^5.4.0",
-    "history": "^1.13.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-router": "^1.0.0",
-    "webpack": "^1.12.6"
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "6.3.x",
+    "babel-preset-es2015-webpack": "^6.3.14",
+    "babel-preset-react": "6.3.x",
+    "es6-promise": "^3.1.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-router": "^2.0.0-rc5",
+    "webpack": "^2.0.7-beta"
   },
   "scripts": {
-    "start": "NODE_ENV=production webpack --progress && babel-node modules/server.js"
+    "start": "set NODE_ENV=development; webpack --progress && babel-node --presets es2015,react modules/server.js"
   },
-  "author": "Ryan Florence",
+  "author": "Ryan Florence, djeeg",
   "license": "ISC"
 }
