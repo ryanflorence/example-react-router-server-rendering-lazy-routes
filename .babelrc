@@ -1,6 +1,14 @@
 {
-  "presets": [
-    "es2015",
-    "react"
-  ]
+//  "presets": [
+//    "es2015",
+//    "react"
+//  ]
 }
+
+
+// DONT define babel config here because it is different on browser/server
+
+// #1 browser = src -> es6+react -> babel -> presets[react+es2015-webpack] -> ES6 -> webpack -> tree shaking -> ES5
+// #2 server  = src -> es6+react -> babel-node -> presets[react+es2015] -> ES5
+
+// http://www.2ality.com/2015/11/configuring-babel6.html

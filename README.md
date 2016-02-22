@@ -17,8 +17,8 @@ open http://localhost:5000
 
 ## How it works
 
-1. Webpack's `require.ensure` defines code splitting points in the app.
-2. We polyfill `require.ensure` for node to just do a normal `require`.
+1. Webpack 2.0.7-beta `System.import` defines code splitting points in the app.
+2. We polyfill `System.import` for node to just do a normal `require`.
 3. The server renders the app with `match` and the stateless
    `<RoutingContext/>`.
 4. When the client JavaScript loads, we use `match` to trigger the split
@@ -26,4 +26,3 @@ open http://localhost:5000
    render would be `null` and not reuse the server rendered markup.
 5. We render on the client.
 6. We raise our arms in the air in triumph.
-
