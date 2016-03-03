@@ -11,10 +11,11 @@
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0",
-    "webpack": "^1.12.6"
+    "webpack": "^1.12.6",
+    "cross-env":"^1.0.7 "
   },
   "scripts": {
-    "start": "NODE_ENV=production webpack --progress && babel-node modules/server.js"
+    "start": "cross-env NODE_ENV=production webpack --progress && babel-node modules/server.js"
   },
   "author": "Ryan Florence",
   "license": "ISC"
