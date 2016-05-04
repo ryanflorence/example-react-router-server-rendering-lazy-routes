@@ -1,7 +1,7 @@
 import http from 'http'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import { match, RoutingContext } from 'react-router'
+import { match, RouterContext } from 'react-router'
 import fs from 'fs'
 import { createPage, write, writeError, writeNotFound, redirect } from './utils/server-utils'
 import routes from './routes/RootRoute'
@@ -9,7 +9,7 @@ import routes from './routes/RootRoute'
 const PORT = process.env.PORT || 5000
 
 function renderApp(props, res) {
-  const markup = renderToString(<RoutingContext {...props}/>)
+  const markup = renderToString(<RouterContext {...props}/>)
   const html = createPage(markup)
   write(html, 'text/html', res)
 }

@@ -1,7 +1,6 @@
 import React from 'react'
-import { match, Router } from 'react-router'
+import { match, Router, browserHistory } from 'react-router'
 import { render } from 'react-dom'
-import { createHistory } from 'history'
 import routes from './routes/RootRoute'
 
 const { pathname, search, hash } = window.location
@@ -11,7 +10,7 @@ const location = `${pathname}${search}${hash}`
 // loading route/component code for the initial location
 match({ routes, location }, () => {
   render(
-    <Router routes={routes} history={createHistory()} />,
+    <Router routes={routes} history={browserHistory} />,
     document.getElementById('app')
   )
 })
